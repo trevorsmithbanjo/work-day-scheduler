@@ -15,30 +15,25 @@ $(document).ready(function () {
     var hours24 = ["9", "10", "11", "12", "13", "14", "15", "16", "17"]
 
     // Current date header
-    $("#current-date").text(today.toLocaleString(monthDay));
+    $("#currentDay").text(today.toLocaleString(monthDay));
 
 
     // For loop to populate entry rows
-    for (var i = 0; i <= 8; i++) {
-        var entryRow = $(`<div class="row mb-2" id="entry-row">
-        <hr>
-        <div class="col-3 text-end p-0">
-            <h2>${hours[i]}</h2>
-        </div>
-        <div class="col-6">
-            <textarea class="form-contorl" id="${hours24[i]}" value="${hours24[i]}" rows="4" style="width:100%"></textarea>
-        </div>
-        <div class="col-3 d-grid gap-2 p-0">
-            <button class="btn bg-info text-center" id="${hours24[i]}" value="${hours24[i]}">Save</button>
-        </div>
-    </div>`);
-        container.append(entryRow);
-    }
-
-    $("textarea").each(function (i, j) {
-        console.log(i);
-        console.log(j);
-    })
+    // for (var i = 0; i <= 8; i++) {
+    //     var entryRow = $(`<div class="row mb-2" id="entry-row">
+    //     <hr>
+    //     <div class="col-3 text-end p-0">
+    //         <h2>${hours[i]}</h2>
+    //     </div>
+    //     <div class="col-6">
+    //         <textarea class="form-contorl" id="${hours24[i]}" value="${hours24[i]}" rows="4" style="width:100%"></textarea>
+    //     </div>
+    //     <div class="col-3 d-grid gap-2 p-0">
+    //         <button class="btn bg-info text-center" id="${hours24[i]}" value="${hours24[i]}">Save</button>
+    //     </div>
+    // </div>`);
+    //     container.append(entryRow);
+    // }
 
     // function to remove letters & whitespace from currentHour
     function hrToNum() {
