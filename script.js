@@ -7,7 +7,7 @@ $(document).ready(function () {
     var currentHour = "";
 
     // Selectors
-    var timeBlock = $(".time-block");
+    var text = "";
     var description = $(".description");
 
     // Current date header
@@ -35,6 +35,18 @@ $(document).ready(function () {
                 $(description[i]).addClass("past").removeClass("present");
             }
         }
+
     }
+
+    // Click Event listener
+    $(".saveBtn").on("click", function () {
+        text = $(description).val().trim();
+        // console.log(text);
+        // hourStored = this.id;
+        // console.log(hourStored);
+        localStorage.setItem(this.id, text);
+    })
+
+    // Set Textarea Colors by Time of Day
     setTextBackground();
 })
