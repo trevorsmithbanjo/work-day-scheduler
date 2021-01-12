@@ -6,6 +6,8 @@ The purpose of this application is to create a Daily Work Scheduler for a busy c
 
 ## Screen Shot
 
-<img src="../work-day-scheduler/Assets/screen_shot.png" alt="Sceen Shot of application">
+<img src="../work-day-scheduler/Assets/screen_shot.png" alt="Sceen Shot of application" width=475>
 
 ## Deployed Link
+
+https://trevorsmithbanjo.github.io/work-day-scheduler/
