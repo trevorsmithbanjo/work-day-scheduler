@@ -24,15 +24,15 @@ $(document).ready(function () {
 
     // Set textarea background
     function setTextBackground() {
-        hrToNum(currentHour);
-        console.log(currentHour);
+        currentHour = parseInt(hrToNum());
         for (var i = 0; i < 9; i++) {
-            if (+description[i].id > +currentHour) {
-                description[i].addClass("future").removeClass("past");
-            } else if (+description[i].id === +currentHour) {
-                description[i].addClass("present").removeClass("future");
+            var hour = parseInt($(description[i]).attr("id"))
+            if (hour > currentHour) {
+                $(description[i]).addClass("future").removeClass("past");
+            } else if (hour === currentHour) {
+                $(description[i]).addClass("present").removeClass("future");
             } else {
-                description[i].addClass("past").removeClass("present");
+                $(description[i]).addClass("past").removeClass("present");
             }
         }
     }
