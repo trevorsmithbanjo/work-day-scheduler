@@ -7,8 +7,12 @@ $(document).ready(function () {
     var currentHour = "";
 
     // Selectors
-    var text = "";
     var description = $(".description");
+
+    // Variables to store
+    var text = "";
+    var hours = ["9", "10", "11", "12", "13", "14", "15", "16", "17"];
+
 
     // Current date header
     $("#currentDay").text(today.toLocaleString(monthDay));
@@ -40,11 +44,11 @@ $(document).ready(function () {
 
     // Click Event listener
     $(".saveBtn").on("click", function () {
-        text = $(description).val().trim();
-        // console.log(text);
-        // hourStored = this.id;
-        // console.log(hourStored);
-        localStorage.setItem(this.id, text);
+        console.log(this.id);
+        if (this.id === description.id) {
+            text = description.value;
+            console.log(text);
+        }
     })
 
     // Set Textarea Colors by Time of Day
